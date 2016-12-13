@@ -5,7 +5,7 @@
 ## Require
 
 ```
-npm install yo -g
+npm install yo webpack webpack-dev-server karma jsdoc -g
 ```
 
 ## Install
@@ -16,7 +16,7 @@ $ cd generator-egjs
 $ npm link
 ```
 
-## Install (Comming Soon)
+## Install (Comming Soon!)
 
 ```
 $ npm install naver/generator-egjs -g
