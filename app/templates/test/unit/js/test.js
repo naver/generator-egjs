@@ -4,6 +4,6 @@
 */
 
 QUnit.test( "init eg.<%= capitalize(componentName) %>", function( assert ) {
-  var visible = new eg.Visible();
-  assert.notEqual(visible, undefined, "Should visible initialized");
+  var instance = new eg.<%= capitalize(componentName) %>();
+  assert.notEqual(instance, undefined, "Should eg.<%= capitalize(componentName) %> initialized");
 });
