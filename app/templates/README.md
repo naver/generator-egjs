@@ -3,12 +3,6 @@
 ## requirement
 
 ```
-// global
-npm install webpack -g
-npm install webpack-dev-server -g
-npm install karma -g
-npm install jsdoc -g
-
 // dependencies
 npm install
 ```
