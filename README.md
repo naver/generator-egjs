@@ -11,9 +11,16 @@ npm install yo -g
 ## Install
 
 ```
-$ npm install naver/generator-egjs -g
+$ git clone naver/generator-egjs
+$ cd generator-egjs
+$ npm link
 ```
 
+## Install (Comming Soon)
+
+```
+$ npm install naver/generator-egjs -g
+```
 
 ## Usage
 
