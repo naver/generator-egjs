@@ -1,0 +1,52 @@
+{
+	"tags": {
+		"allowUnknownTags" : true,
+		"dictionaries": ["jsdoc","closure"]
+	},
+	"source": {
+		"includePattern": "src/.+\\.js(doc|x)?$",
+		"excludePattern": "(^|\\/|\\\\)_"
+	},
+	"opts": {
+		"template": "node_modules/egjs-jsdoc-template",
+		"destination": "./doc/"
+	},
+	"plugins": [
+		"plugins/markdown",
+		"node_modules/egjs-jsdoc-template/jsdoc-plugin/ko", 
+		"node_modules/egjs-jsdoc-template/jsdoc-plugin/group",
+		"node_modules/egjs-jsdoc-template/jsdoc-plugin/codepen",
+		"node_modules/egjs-jsdoc-template/jsdoc-plugin/support"
+	],
+	"templates": {
+		"cleverLinks": true,
+		"monospaceLinks": true,
+		"default": {
+			"outputSourceFiles" : true
+		},
+		"applicationName": "egjs",
+		"disqus": "egjs",
+		"googleAnalytics": "",
+		"openGraph": {
+			"title": "",
+			"type": "website",
+			"image": "",
+			"site_name": "",
+			"url": ""
+		},
+		"meta": {
+			"title": "egjs::<%= capitalize(componentName) %> - API",
+			"description": "<%= options.description %>",
+			"keyword": "jQuery, UI Component, egjs, <%= componentName %>"
+		},
+		"linenums": true,
+		"link": {
+			"canonical": "http://naver.github.io/egjs/latest/doc/"
+		}
+	},
+	"markdown": {
+		"parser": "gfm",
+		"hardwrap": true,
+		"tags": ["examples", "ko"]
+	}
+}
