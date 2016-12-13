@@ -1,7 +1,7 @@
 "use strict";
 var generators = require("yeoman-generator");
 var capitalize = require("lodash.capitalize");
-var isSpdxLicenseId = require("spdx-expression-validate");
+var isSpdxLicenseId = require("is-spdx-license-id");
 var semverRegex = require("semver-regex");
 
 module.exports = generators.Base.extend({
