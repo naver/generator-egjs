@@ -1,6 +1,6 @@
 /**
 * Copyright (c) <%= options.author %>
-* egjs projects are licensed under the MIT license
+* eg.<%= componentName %> projects are licensed under the <%= options.license %> license
 */
 <% if(options.extendsComponent){ %>import { Component } from "eg.component";<% } %>
 

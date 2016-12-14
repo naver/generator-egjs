@@ -67,3 +67,7 @@ eg.<%= componentName %>
   ├─ README.md
   └─ webpack.config.js
 ```
+
+## License
+
+<%= options.license %> © <%= options.author %>

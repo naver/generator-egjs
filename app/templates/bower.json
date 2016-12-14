@@ -1,7 +1,7 @@
 {
 	"name": "eg.<%= componentName %>",
 	"version": "<%= options.version %>",
-	"license": "MIT",
+	"license": "<%= options.license %>",
 	"keywords": [
 		"egjs",
 		"<%= componentName %>",

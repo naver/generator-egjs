@@ -8,7 +8,7 @@
 		"jsdoc": "jsdoc -c jsdoc.json",
 		"test": "karma start"
 	},
-	"license": "MIT",<% if(options.extendsComponent){ %>
+	"license": "<%= options.license %>",<% if(options.extendsComponent){ %>
 	"dependencies": {
 		"eg.component": "github:naver/eg.component"
 	},<% } %>

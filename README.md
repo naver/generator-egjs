@@ -39,7 +39,6 @@ $ yo egjs [componentName]
 $ yo egjs visible
 ```
 
-
 ## License
 
 MIT © [Naver corp.](http://navercorp.com)
