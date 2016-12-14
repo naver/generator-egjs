@@ -1,7 +1,7 @@
 /**
-* Copyright (c) <%= options.author %>
-* eg.<%= componentName %> projects are licensed under the <%= options.license %> license
-*/
+ * Copyright (c) <%= options.author %>
+ * eg.<%= componentName %> projects are licensed under the <%= options.license %> license
+ */
 <% if(options.extendsComponent){ %>import { Component } from "eg.component";<% } %>
 
 /**

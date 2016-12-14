@@ -1,6 +1,6 @@
 /**
-* Copyright (c) <%= options.author %>
-*/
+ * Copyright (c) <%= options.author %>
+ */
 
 QUnit.test("init eg.<%= capitalize(componentName) %>", function(assert) {
   var instance = new eg.<%= capitalize(componentName) %>();
