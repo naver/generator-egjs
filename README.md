@@ -11,7 +11,7 @@ npm install yo webpack webpack-dev-server karma jsdoc -g
 ## Install
 
 ```
-$ git clone naver/generator-egjs
+$ git clone https://github.com/naver/generator-egjs.git
 $ cd generator-egjs
 $ npm link
 ```
@@ -19,7 +19,7 @@ $ npm link
 ## Install (Comming Soon!)
 
 ```
-$ npm install naver/generator-egjs -g
+$ npm install generator-egjs -g
 ```
 
 ## Usage
@@ -27,6 +27,8 @@ $ npm install naver/generator-egjs -g
 Run it with [`yo`](https://github.com/yeoman/yo):
 
 ```
+$ cd /path/to/workspace
+
 // without component name
 $ yo egjs
 
