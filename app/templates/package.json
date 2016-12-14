@@ -1,5 +1,5 @@
 {
-	"name": "eg.<%= capitalize(componentName) %>",
+	"name": "eg.<%= componentName %>",
 	"version": "<%= options.version %>",
 	"main": "src/index.js",
 	"scripts": {
@@ -8,9 +8,9 @@
 		"jsdoc": "jsdoc -c jsdoc.json",
 		"test": "karma start"
 	},
-	"license": "MIT",
-	<% if(options.extendsComponent){ %>"dependencies": {
-		"eg.Component": "github:naver/eg.Component"
+	"license": "MIT",<% if(options.extendsComponent){ %>
+	"dependencies": {
+		"eg.component": "github:naver/eg.component"
 	},<% } %>
 	"devDependencies": {
 		"babel-core": "^6.18.2",

@@ -1,4 +1,4 @@
-# <%= capitalize(componentName) %>
+# eg.<%= capitalize(componentName) %>
 
 ## requirement
 
@@ -36,12 +36,12 @@ checkout http://localhost:8080/demo/
 ## directories
 
 ```
-eg.<%= capitalize(componentName) %>
+eg.<%= componentName %>
   ├─ dist/
-  │   └─ eg.<%= capitalize(componentName) %>.js
-  │   └─ eg.<%= capitalize(componentName) %>.min.js
-  │   └─ eg.<%= capitalize(componentName) %>.js.map
-  │   └─ eg.<%= capitalize(componentName) %>.min.js.map
+  │   └─ eg.<%= componentName %>.js
+  │   └─ eg.<%= componentName %>.min.js
+  │   └─ eg.<%= componentName %>.js.map
+  │   └─ eg.<%= componentName %>.min.js.map
   ├─ src/
   │   └─ index.js
   ├─ demo/

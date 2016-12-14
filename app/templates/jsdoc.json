@@ -36,7 +36,7 @@
 			"url": ""
 		},
 		"meta": {
-			"title": "egjs::<%= capitalize(componentName) %> - API",
+			"title": "egjs::eg.<%= capitalize(componentName) %> - API",
 			"description": "<%= options.description %>",
 			"keyword": "jQuery, UI Component, egjs, <%= componentName %>"
 		},

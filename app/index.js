@@ -139,16 +139,16 @@ module.exports = generators.Base.extend({
 	},
 	writing: {
 		createDir: function() {
-			this.log("\nCreating eg." + capitalize(this.componentName));
+			this.log("\nCreating eg." + this.componentName);
 
-			this.destinationRoot("eg." + capitalize(this.componentName));
+			this.destinationRoot("eg." + this.componentName);
 			this.directory(".", ".");
 		}
 	},
 	end: {
 		default: function() {
 			this.log("\nDone!!");
-			this.log("Run npm install in 'eg." + capitalize(this.componentName) + "' directory.");
+			this.log("Run npm install in 'eg." + this.componentName + "' directory.");
 			this.log("And then run 'webpack-dev-server', checkout http://localhost:8080/demo/");
 		}
 	}

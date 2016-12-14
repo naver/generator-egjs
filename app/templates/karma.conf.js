@@ -6,7 +6,7 @@ module.exports = function(config) {
 			"node_modules/jquery/dist/jquery.js",
 			"node_modules/iscroll/build/iscroll.js",
 			// src files
-			"dist/eg.<%= capitalize(componentName) %>.js",
+			"dist/eg.<%= componentName %>.js",
 			// test files
 			"test/**/*.js"
 		],

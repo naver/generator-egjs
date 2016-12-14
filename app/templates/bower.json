@@ -1,5 +1,5 @@
 {
-	"name": "eg.<%= capitalize(componentName) %>",
+	"name": "eg.<%= componentName %>",
 	"version": "<%= options.version %>",
 	"license": "MIT",
 	"keywords": [
@@ -14,5 +14,5 @@
 		"bower_components",
 		"node_modules"
 	],
-	"main": "dist/eg.<%= capitalize(componentName) %>.js"
+	"main": "dist/eg.<%= componentName %>.js"
 }
