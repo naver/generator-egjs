@@ -1,5 +1,5 @@
 /**
-* Copyright (c) NAVER Corp.
+* Copyright (c) <%= options.author %>
 * egjs projects are licensed under the MIT license
 */
 
