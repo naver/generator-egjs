@@ -6,30 +6,30 @@ module.exports = {
 		"eg.<%= componentName %>.min": "./src/index.js"
 	},
 	output: {
-		path: "./dist",
+		path: __dirname + "/dist",
 		filename: "[name].js",
 		library: "eg",
 		libraryTarget: "umd"
-	},
+	},<% if(options.extendsComponent){ %>
+	externals: ["eg.component"],<% } %>
 	devServer: {
 		publicPath: "/dist/"
 	},
 	devtool: "source-map",
 	module: {
-		loaders: [
-		  {
+		rules: [{
 			test: /\.js$/,
+			exclude: /node_modules/,
 			loader: "babel-loader",
-			query: {
-			  presets: ["es2015"]
+			options: {
+		  		presets: ["es2015"]
 			}
-		  }
-		]
+		}]
 	},
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
-		  include: /\.min\.js$/,
-		  minimize: true
+			include: /\.min\.js$/,
+			minimize: true
 		})
 	]
 };
