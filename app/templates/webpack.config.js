@@ -8,10 +8,16 @@ module.exports = {
 	output: {
 		path: __dirname + "/dist",
 		filename: "[name].js",
-		library: "eg",
+		library: ["eg", "[name]"],
 		libraryTarget: "umd"
 	},<% if(options.extendsComponent){ %>
-	externals: ["eg.component"],<% } %>
+	externals: {
+		"eg.component" : {
+			commonjs: "eg.component",
+			amd: "eg.component",
+			root: ["eg", "component"]
+		}
+	},<% } %>
 	devServer: {
 		publicPath: "/dist/"
 	},
