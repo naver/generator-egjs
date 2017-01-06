@@ -13,8 +13,9 @@ module.exports = {
 	},<% if(options.extendsComponent){ %>
 	externals: {
 		"eg.component" : {
-			commonjs: "eg.component",
-			amd: "eg.component",
+			commonjs: "component",
+			commonjs2: "component",
+			amd: "component",
 			root: ["eg", "component"]
 		}
 	},<% } %>
