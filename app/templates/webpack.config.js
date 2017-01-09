@@ -8,15 +8,15 @@ module.exports = {
 	output: {
 		path: __dirname + "/dist",
 		filename: "[name].js",
-		library: ["eg", "[name]"],
+		library: ["eg", "<%= capitalize(componentName) %>"],
 		libraryTarget: "umd"
 	},<% if(options.extendsComponent){ %>
 	externals: {
 		"eg.component" : {
-			commonjs: "component",
-			commonjs2: "component",
-			amd: "component",
-			root: ["eg", "component"]
+			commonjs: "Component",
+			commonjs2: "Component",
+			amd: "Component",
+			root: ["eg", "Component"]
 		}
 	},<% } %>
 	devServer: {
