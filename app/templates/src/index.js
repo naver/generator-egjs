@@ -8,7 +8,7 @@
  * <%= options.description %>
  * @class
  * @name eg.<%= capitalize(componentName) %>
- <% if(options.extendsComponent){ %>* @extends eg.component<% } %>
+ <% if(options.extendsComponent){ %>* @extends eg.Component<% } %>
  * @group egjs
  */
 export class <%= capitalize(componentName) %><% if(options.extendsComponent){ %> extends Component<% } %> {
