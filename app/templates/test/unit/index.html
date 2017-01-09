@@ -9,7 +9,8 @@
 <body>
 <div id="qunit"></div>
 <div id="qunit-fixture"></div>
-<script src="../../node_modules/qunitjs/qunit/qunit.js"></script>
+<script src="../../node_modules/qunitjs/qunit/qunit.js"></script><% if(options.extendsComponent){ %>
+<script src="../node_modules/eg.component/dist/eg.component.js"></script><% } %>
 <script src="../../dist/eg.<%= componentName %>.js"></script>
 <script src="js/test.js"></script>
 </body>
