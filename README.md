@@ -5,7 +5,7 @@
 ## Require
 
 ```
-npm install yo webpack webpack-dev-server karma jsdoc -g
+npm install yo -g
 ```
 
 ## Install
