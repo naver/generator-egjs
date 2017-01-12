@@ -1,4 +1,5 @@
 var webpack = require("webpack");
+var path = require("path");
 
 module.exports = {
 	entry: {
@@ -6,16 +7,16 @@ module.exports = {
 		"eg.<%= componentName %>.min": "./src/index.js"
 	},
 	output: {
-		path: __dirname + "/dist",
+		path: path.resolve(__dirname, "dist"),
 		filename: "[name].js",
 		library: ["eg", "<%= capitalize(componentName) %>"],
 		libraryTarget: "umd"
 	},<% if(options.extendsComponent){ %>
 	externals: {
 		"eg.component" : {
-			commonjs: "Component",
-			commonjs2: "Component",
-			amd: "Component",
+			commonjs: "eg.component",
+			commonjs2: "eg.component",
+			amd: "eg.component",
 			root: ["eg", "Component"]
 		}
 	},<% } %>
