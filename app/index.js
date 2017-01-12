@@ -22,7 +22,7 @@ module.exports = generators.Base.extend({
 			var prompt = [{
 				type: "input",
 				name: "componentName",
-				message: "Enter component name",
+				message: "Enter component name(\"camelCase\" is recommended)",
 				validate: function(input) {
 					if (!input) {
 						this.log("\nPlease enter a valid component name");
@@ -143,13 +143,19 @@ module.exports = generators.Base.extend({
 
 			this.destinationRoot("eg." + this.componentName);
 			this.directory(".", ".");
+		},
+		renameComponent: function() {
+			this.fs.move(
+				this.destinationPath("src/componentName.js"),
+				this.destinationPath("src/" + this.componentName + ".js")
+			)
 		}
 	},
 	end: {
 		default: function() {
 			this.log("\nDone!!");
 			this.log("Run npm install in 'eg." + this.componentName + "' directory.");
-			this.log("And then run 'webpack-dev-server', checkout http://localhost:8080/demo/");
+			this.log("And then run 'npm run webpack-dev-server', checkout http://localhost:8080/demo/");
 		}
 	}
 });
