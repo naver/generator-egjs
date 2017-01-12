@@ -1,13 +1,13 @@
 {
 	"name": "eg.<%= componentName %>",
 	"version": "<%= options.version %>",
-	"main": "src/index.js",
+	"main": "dist/eg.<%= componentName %>.js",
 	"scripts": {
-		"build": "node node_modules/webpack/bin/webpack.js",
-		"dev-server": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-		"jsdoc": "node node_modules/jsdoc/jsdoc.js -c jsdoc.json",
+		"build": "webpack",
+		"dev-server": "webpack-dev-server",
+		"jsdoc": "jsdoc -c jsdoc.json",
 		"test": "karma start",
-		"testee": "node node_modules/testee/bin/testee test/unit/index.html --browsers chrome"
+		"testee": "testee test/unit/index.html --browsers chrome"
 	},
 	"author": "<%= options.author %>",
 	"license": "<%= options.license %>",<% if(options.extendsComponent){ %>
