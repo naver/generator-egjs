@@ -44,7 +44,7 @@ egjs-<%= componentName %>
   │   └─ <%= componentName %>.min.js.map
   ├─ src/
   │   └─ index.js
-  │   └─ └─ <%= componentName %>.js
+  │   └─ <%= componentName %>.js
   ├─ demo/
   │   ├─ js
   │   │   └─ demo.js
