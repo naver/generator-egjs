@@ -3,8 +3,8 @@ var path = require("path");
 
 module.exports = {
 	entry: {
-		"eg.<%= componentName %>": "./src/index.js",
-		"eg.<%= componentName %>.min": "./src/index.js"
+		"<%= componentName %>": "./src/index.js",
+		"<%= componentName %>.min": "./src/index.js"
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -13,10 +13,10 @@ module.exports = {
 		libraryTarget: "umd"
 	},<% if(options.extendsComponent){ %>
 	externals: {
-		"eg.component" : {
-			commonjs: "eg.component",
-			commonjs2: "eg.component",
-			amd: "eg.component",
+		"eg.Component" : {
+			commonjs: "eg.Component",
+			commonjs2: "eg.Component",
+			amd: "eg.Component",
 			root: ["eg", "Component"]
 		}
 	},<% } %>

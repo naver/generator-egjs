@@ -1,4 +1,4 @@
-# eg.<%= capitalize(componentName) %>
+# egjs-<%= componentName %>
 
 ## requirement
 
@@ -36,14 +36,15 @@ checkout http://localhost:8080/demo/
 ## directories
 
 ```
-eg.<%= componentName %>
+egjs-<%= componentName %>
   ├─ dist/
-  │   └─ eg.<%= componentName %>.js
-  │   └─ eg.<%= componentName %>.min.js
-  │   └─ eg.<%= componentName %>.js.map
-  │   └─ eg.<%= componentName %>.min.js.map
+  │   └─ <%= componentName %>.js
+  │   └─ <%= componentName %>.min.js
+  │   └─ <%= componentName %>.js.map
+  │   └─ <%= componentName %>.min.js.map
   ├─ src/
   │   └─ index.js
+  │   └─ └─ <%= componentName %>.js
   ├─ demo/
   │   ├─ js
   │   │   └─ demo.js

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>unit test::eg.<%= capitalize(componentName) %></title>
+<title>unit test::egjs-<%= componentName %></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../../node_modules/qunitjs/qunit/qunit.css">
 </head>
@@ -10,8 +10,8 @@
 <div id="qunit"></div>
 <div id="qunit-fixture"></div>
 <script src="../../node_modules/qunitjs/qunit/qunit.js"></script><% if(options.extendsComponent){ %>
-<script src="../node_modules/eg.component/dist/eg.component.js"></script><% } %>
-<script src="../../dist/eg.<%= componentName %>.js"></script>
+<script src="../../node_modules/@egjs/component/dist/component.js"></script><% } %>
+<script src="../../dist/<%= componentName %>.js"></script>
 <script src="js/test.js"></script>
 </body>
 </html>

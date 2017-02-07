@@ -1,7 +1,7 @@
 {
-	"name": "eg.<%= componentName %>",
+	"name": "@egjs/<%= componentName %>",
 	"version": "<%= options.version %>",
-	"main": "dist/eg.<%= componentName %>.js",
+	"main": "dist/<%= componentName %>.js",
 	"scripts": {
 		"build": "webpack",
 		"dev-server": "webpack-dev-server",
@@ -12,7 +12,7 @@
 	"author": "<%= options.author %>",
 	"license": "<%= options.license %>",<% if(options.extendsComponent){ %>
 	"dependencies": {
-		"eg.component": "github:naver/eg.component"
+		"egjs-component": "github:naver/egjs-component"
 	},<% } %>
 	"devDependencies": {
 		"babel-core": "^6.18.2",

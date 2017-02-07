@@ -1,14 +1,14 @@
 /**
  * Copyright (c) <%= options.author %>
- * eg.<%= componentName %> projects are licensed under the <%= options.license %> license
+ * egjs-<%= componentName %> projects are licensed under the <%= options.license %> license
  */
-<% if(options.extendsComponent){ %>import Component from "eg.component";<% } %>
+<% if(options.extendsComponent){ %>import Component from "@egjs/component";<% } %>
 
 /**
  * <%= options.description %>
  * @class
- * @name eg.<%= capitalize(componentName) %>
- <% if(options.extendsComponent){ %>* @extends eg.Component<% } %>
+ * @name <%= capitalize(componentName) %>
+ <% if(options.extendsComponent){ %>* @extends Component<% } %>
  * @group egjs
  */
 export class <%= capitalize(componentName) %><% if(options.extendsComponent){ %> extends Component<% } %> {

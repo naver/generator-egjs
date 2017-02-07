@@ -22,7 +22,7 @@ module.exports = generators.Base.extend({
 			var prompt = [{
 				type: "input",
 				name: "componentName",
-				message: "Enter component name(\"camelCase\" is recommended)",
+				message: "Enter component name(\"lowercase\" is recommended)",
 				validate: function(input) {
 					if (!input) {
 						this.log("\nPlease enter a valid component name");
@@ -105,7 +105,7 @@ module.exports = generators.Base.extend({
 			var prompt = [{
 				type: "confirm",
 				name: "extendsComponent",
-				message: "Would you like to extends a 'eg.Component' for your project?",
+				message: "Would you like to extends a 'egjs-component' for your project?",
 				default: false
 			}];
 
@@ -135,18 +135,18 @@ module.exports = generators.Base.extend({
 			return this.prompt(prompt).then(function(answers) {
 				this.options.version = answers.version.trim();
 			}.bind(this));
-		},
+		}
 	},
 	writing: {
 		createDir: function() {
-			this.log("\nCreating eg." + this.componentName);
+			this.log("\nCreating egjs-" + this.componentName);
 
-			this.destinationRoot("eg." + this.componentName);
+			this.destinationRoot("egjs-" + this.componentName);
 			this.directory(".", ".");
 		},
 		renameComponent: function() {
 			this.fs.move(
-				this.destinationPath("src/componentName.js"),
+				this.destinationPath("src/component.template.js"),
 				this.destinationPath("src/" + this.componentName + ".js")
 			)
 		}
@@ -154,7 +154,7 @@ module.exports = generators.Base.extend({
 	end: {
 		default: function() {
 			this.log("\nDone!!");
-			this.log("Run npm install in 'eg." + this.componentName + "' directory.");
+			this.log("Run npm install in 'egjs-" + this.componentName + "' directory.");
 			this.log("And then run 'npm run webpack-dev-server', checkout http://localhost:8080/demo/");
 		}
 	}
