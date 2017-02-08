@@ -1,6 +1,6 @@
 # 'egjs' Component Generator
 
-> Scaffolds out [egjs Component](https://github.com/naver?utf8=%E2%9C%93&q=eg)
+> Scaffolds out [egjs component](https://github.com/naver?utf8=%E2%9C%93&q=egjs-)
 
 ## Require
 
@@ -11,9 +11,7 @@ npm install yo -g
 ## Install
 
 ```
-$ git clone https://github.com/naver/generator-egjs.git
-$ cd generator-egjs
-$ npm link
+$ npm install naver/generator-egjs -g
 ```
 
 ## Install (Comming Soon!)
@@ -24,7 +22,9 @@ $ npm install generator-egjs -g
 
 ## Usage
 
-Run it with [`yo`](https://github.com/yeoman/yo):
+Run it with [`yo`](https://github.com/yeoman/yo) egjs
+
+> Suggested egjs component name is in lower case
 
 ```
 $ cd /path/to/workspace
@@ -33,10 +33,10 @@ $ cd /path/to/workspace
 $ yo egjs
 
 // or with component name
-$ yo egjs [componentName]
+$ yo egjs [componentname]
 
-// ex) generate visible component
-$ yo egjs visible
+// ex) generate infinitegrid component
+$ yo egjs infinitegrid
 ```
 
 ## License
