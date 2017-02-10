@@ -1,6 +1,7 @@
 "use strict";
 var generators = require("yeoman-generator");
 var capitalize = require("lodash.capitalize");
+var upperFirst = require("lodash.upperfirst");
 var isSpdxLicenseId = require("is-spdx-license-id");
 var semverRegex = require("semver-regex");
 
@@ -8,6 +9,7 @@ module.exports = generators.Base.extend({
 	constructor: function() {
 		generators.Base.apply(this, arguments);
 		this.capitalize = capitalize;
+		this.upperFirst = upperFirst;
 		this.argument("componentName", {
 			type: String,
 			required: false
@@ -22,7 +24,7 @@ module.exports = generators.Base.extend({
 			var prompt = [{
 				type: "input",
 				name: "componentName",
-				message: "Enter component name(\"lowercase\" is recommended)",
+				message: "Enter component name(\"camelCase\" is recommended)",
 				validate: function(input) {
 					if (!input) {
 						this.log("\nPlease enter a valid component name");
@@ -139,22 +141,22 @@ module.exports = generators.Base.extend({
 	},
 	writing: {
 		createDir: function() {
-			this.log("\nCreating egjs-" + this.componentName);
+			this.log("\nCreating egjs-" + this.componentName.toLowerCase());
 
-			this.destinationRoot("egjs-" + this.componentName);
+			this.destinationRoot("egjs-" + this.componentName.toLowerCase());
 			this.directory(".", ".");
 		},
 		renameComponent: function() {
 			this.fs.move(
 				this.destinationPath("src/component.template.js"),
-				this.destinationPath("src/" + this.componentName + ".js")
+				this.destinationPath("src/" + this.componentName.toLowerCase() + ".js")
 			)
 		}
 	},
 	end: {
 		default: function() {
 			this.log("\nDone!!");
-			this.log("Run npm install in 'egjs-" + this.componentName + "' directory.");
+			this.log("Run npm install in 'egjs-" + this.componentName.toLowerCase() + "' directory.");
 			this.log("And then run 'npm run webpack-dev-server', checkout http://localhost:8080/demo/");
 		}
 	}

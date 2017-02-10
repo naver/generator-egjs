@@ -2,5 +2,5 @@
  * Copyright (c) <%= options.author %>
  */
 
-var <%= componentName %> = new eg.<%= capitalize(componentName) %>;
-console.log("Hello eg.<%= capitalize(componentName) %>!!!", <%= componentName %>);
+var <%= componentName %> = new eg.<%= upperFirst(componentName) %>;
+console.log("Hello eg.<%= upperFirst(componentName) %>!!!", <%= componentName %>);

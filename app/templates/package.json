@@ -1,7 +1,7 @@
 {
-	"name": "@egjs/<%= componentName %>",
+	"name": "@egjs/<%= componentName.toLowerCase() %>",
 	"version": "<%= options.version %>",
-	"main": "dist/<%= componentName %>.js",
+	"main": "dist/<%= componentName.toLowerCase() %>.js",
 	"scripts": {
 		"build": "webpack",
 		"dev-server": "webpack-dev-server",

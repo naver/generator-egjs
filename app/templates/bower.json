@@ -1,5 +1,5 @@
 {
-	"name": "egjs-<%= componentName %>",
+	"name": "egjs-<%= componentName.toLowerCase() %>",
 	"version": "<%= options.version %>",
 	"license": "<%= options.license %>",
 	"keywords": [
@@ -14,5 +14,5 @@
 		"bower_components",
 		"node_modules"
 	],
-	"main": "dist/<%= componentName %>.js"
+	"main": "dist/<%= componentName.toLowerCase() %>.js"
 }

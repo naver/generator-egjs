@@ -3,13 +3,13 @@ var path = require("path");
 
 module.exports = {
 	entry: {
-		"<%= componentName %>": "./src/index.js",
-		"<%= componentName %>.min": "./src/index.js"
+		"<%= componentName.toLowerCase() %>": "./src/index.js",
+		"<%= componentName.toLowerCase() %>.min": "./src/index.js"
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "[name].js",
-		library: ["eg", "<%= capitalize(componentName) %>"],
+		library: ["eg", "<%= upperFirst(componentName) %>"],
 		libraryTarget: "umd"
 	},<% if(options.extendsComponent){ %>
 	externals: {

@@ -1,7 +1,7 @@
 /**
  * Copyright (c) <%= options.author %>
- * egjs-<%= componentName %> projects are licensed under the <%= options.license %> license
+ * egjs-<%= componentName.toLowerCase() %> projects are licensed under the <%= options.license %> license
  */
 
-import <%= capitalize(componentName) %> from "./<%= componentName %>";
-module.exports = <%= capitalize(componentName) %>;
+import <%= upperFirst(componentName) %> from "./<%= componentName.toLowerCase() %>";
+module.exports = <%= upperFirst(componentName) %>;

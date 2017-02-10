@@ -1,4 +1,4 @@
-# egjs-<%= componentName %>
+# egjs-<%= componentName.toLowerCase() %>
 
 ## requirement
 
@@ -36,15 +36,15 @@ checkout http://localhost:8080/demo/
 ## directories
 
 ```
-egjs-<%= componentName %>
+egjs-<%= componentName.toLowerCase() %>
   ├─ dist/
-  │   └─ <%= componentName %>.js
-  │   └─ <%= componentName %>.min.js
-  │   └─ <%= componentName %>.js.map
-  │   └─ <%= componentName %>.min.js.map
+  │   └─ <%= componentName.toLowerCase() %>.js
+  │   └─ <%= componentName.toLowerCase() %>.min.js
+  │   └─ <%= componentName.toLowerCase() %>.js.map
+  │   └─ <%= componentName.toLowerCase() %>.min.js.map
   ├─ src/
   │   └─ index.js
-  │   └─ <%= componentName %>.js
+  │   └─ <%= componentName.toLowerCase() %>.js
   ├─ demo/
   │   ├─ js
   │   │   └─ demo.js
