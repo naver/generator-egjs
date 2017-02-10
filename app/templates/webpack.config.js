@@ -13,10 +13,10 @@ module.exports = {
 		libraryTarget: "umd"
 	},<% if(options.extendsComponent){ %>
 	externals: {
-		"eg.Component" : {
-			commonjs: "eg.Component",
-			commonjs2: "eg.Component",
-			amd: "eg.Component",
+		"@egjs/component" : {
+			commonjs: "@egjs/component",
+			commonjs2: "@egjs/component",
+			amd: "@egjs/component",
 			root: ["eg", "Component"]
 		}
 	},<% } %>
