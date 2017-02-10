@@ -11,8 +11,10 @@
  <% if(options.extendsComponent){ %>* @extends Component<% } %>
  * @group egjs
  */
-export class <%= capitalize(componentName) %><% if(options.extendsComponent){ %> extends Component<% } %> {
+class <%= capitalize(componentName) %><% if(options.extendsComponent){ %> extends Component<% } %> {
 	constructor () {
 		<% if(options.extendsComponent){ %>super();<% } %>
 	}
 }
+
+export default <%= capitalize(componentName) %>;
