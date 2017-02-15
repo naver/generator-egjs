@@ -3,9 +3,9 @@
 	"version": "<%= options.version %>",
 	"main": "dist/<%= componentName.toLowerCase() %>.js",
 	"scripts": {
+		"start": "webpack-dev-server --open",
 		"build": "webpack --env=development",
 		"build:prod": "webpack --env=production && webpack --env=packaged",
-		"dev-server": "webpack-dev-server",
 		"jsdoc": "jsdoc -c jsdoc.json",
 		"test": "karma start",
 		"testee": "testee test/unit/index.html --browsers chrome"
