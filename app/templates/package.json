@@ -3,7 +3,8 @@
 	"version": "<%= options.version %>",
 	"main": "dist/<%= componentName.toLowerCase() %>.js",
 	"scripts": {
-		"build": "webpack",
+		"build": "webpack --env=development",
+		"build:prod": "webpack --env=production && webpack --env=packaged",
 		"dev-server": "webpack-dev-server",
 		"jsdoc": "jsdoc -c jsdoc.json",
 		"test": "karma start",
@@ -29,6 +30,7 @@
 		"qunitjs": "^1.23.1",
 		"testee": "^0.3.0",
 		"webpack": "^2.2.0-rc.3",
-		"webpack-dev-server": "^2.2.0-rc.0"
+		"webpack-dev-server": "^2.2.0-rc.0",
+		"webpack-merge": "^2.6.1"
 	}
 }

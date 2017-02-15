@@ -1,16 +1,16 @@
 var webpack = require("webpack");
 var path = require("path");
 
-module.exports = {
+var config = {
 	entry: {
-		"<%= componentName.toLowerCase() %>": "./src/index.js",
-		"<%= componentName.toLowerCase() %>.min": "./src/index.js"
+		"<%= componentName.toLowerCase() %>": "./src/index.js"
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "[name].js",
 		library: ["eg", "<%= upperFirst(componentName) %>"],
-		libraryTarget: "umd"
+		libraryTarget: "umd",
+		umdNamedDefine: true
 	},<% if(options.extendsComponent){ %>
 	externals: {
 		"@egjs/component" : {
@@ -20,10 +20,7 @@ module.exports = {
 			root: ["eg", "Component"]
 		}
 	},<% } %>
-	devServer: {
-		publicPath: "/dist/"
-	},
-	devtool: "source-map",
+	devtool: "cheap-module-source-map",
 	module: {
 		rules: [{
 			test: /\.js$/,
@@ -37,7 +34,13 @@ module.exports = {
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
 			include: /\.min\.js$/,
-			minimize: true
+			minimize: true,
+			sourceMap: true
 		})
 	]
+};
+
+module.exports = function(env) {
+	env = env || "development";
+	return require("./config/webpack.config." + env + ".js")(config);
 };
