@@ -7,43 +7,48 @@
 npm install
 ```
 
+## start
+
+```
+// it will open browser
+npm start // or webpack-dev-server --open
+```
+
+checkout http://localhost:8080/demo
+
 ## build
 
 ```
-npm run build //or webpack
+npm run build // or webpack
 ```
 
 ## test
 
 ```
-npm run test //or karma start
+npm run test // or karma start
 ```
 
 ## documentation
 
 ```
-npm run jsdoc //or jsdoc -c jsdoc.json
+npm run jsdoc // or jsdoc -c jsdoc.json
 ```
-
-## dev server
-
-```
-npm run dev-server //or webpack-dev-server
-```
-
-checkout http://localhost:8080/demo/
 
 ## directories
 
 ```
 egjs-<%= componentName.toLowerCase() %>
+  ├─ consif/
+  │   ├─ webpack.config.development.js
+  │   ├─ webpack.config.production.js
+  │   └─ webpack.config.packaged.js
   ├─ dist/
-  │   └─ <%= componentName.toLowerCase() %>.js
-  │   └─ <%= componentName.toLowerCase() %>.min.js
-  │   └─ <%= componentName.toLowerCase() %>.js.map
+  │   ├─ <%= componentName.toLowerCase() %>.js
+  │   ├─ <%= componentName.toLowerCase() %>.min.js
+  │   ├─ <%= componentName.toLowerCase() %>.js.map
   │   └─ <%= componentName.toLowerCase() %>.min.js.map
   ├─ src/
-  │   └─ index.js
+  │   ├─ index.js
   │   └─ <%= componentName.toLowerCase() %>.js
   ├─ demo/
   │   ├─ js
