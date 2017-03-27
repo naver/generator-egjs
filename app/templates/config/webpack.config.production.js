@@ -7,5 +7,7 @@ var config = {
 };
 
 module.exports = function(common) {
-	return merge(common, config);
+	return merge.strategy({
+		entry: "replace"
+	})(common, config);
 };

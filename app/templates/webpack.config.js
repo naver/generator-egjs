@@ -1,5 +1,6 @@
 var webpack = require("webpack");
 var path = require("path");
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 var config = {
 	entry: {
@@ -27,16 +28,37 @@ var config = {
 			exclude: /node_modules/,
 			loader: "babel-loader",
 			options: {
-				presets: [
-					["es2015"]
+				"presets": [ 
+					[
+						"es2015",
+						{
+							"loose": true,
+							"mouldes": false
+						}
+					]
+				],
+				"plugins": [
+					"add-module-exports"
 				]
 			}
 		}]
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin({
+		new UglifyJSPlugin({
 			include: /\.min\.js$/,
-			minimize: true,
+			beautify: false,
+			mangle: {
+				screw_ie8: true,
+				keep_fnames: true
+			},
+			compress: {
+				screw_ie8: true,
+				warnings: false
+			},
+			output: {
+				screw_ie8: false
+			},
+			comments: false,
 			sourceMap: true
 		})
 	]
