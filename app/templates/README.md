@@ -38,7 +38,7 @@ npm run jsdoc // or jsdoc -c jsdoc.json
 
 ```
 egjs-<%= componentName.toLowerCase() %>
-  ├─ consif/
+  ├─ config/
   │   ├─ webpack.config.development.js
   │   ├─ webpack.config.production.js
   │   └─ webpack.config.packaged.js
