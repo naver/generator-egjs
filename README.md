@@ -11,7 +11,10 @@ npm install yo -g
 ## Install
 
 ```
-$ npm install naver/generator-egjs -g
+$ cd /path/to/workspace
+$ git clone https://github.com/naver/generator-egjs.git
+$ cd generator-egjs
+$ npm link
 ```
 
 ## Install (Comming Soon!)
@@ -33,7 +36,7 @@ $ cd /path/to/workspace
 $ yo egjs
 
 // or with component name
-$ yo egjs [componentname]
+$ yo egjs <component name>
 
 // ex) generate infinitegrid component
 $ yo egjs infinitegrid
