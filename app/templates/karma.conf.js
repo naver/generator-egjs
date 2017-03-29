@@ -27,8 +27,6 @@ module.exports = function(config) {
 			'./test/**/*.spec.js': ['webpack']
 		},
 
-		logLevel:config.LOG_DEBUG,
-
 		browsers: ["PhantomJS"]
 	};
 
