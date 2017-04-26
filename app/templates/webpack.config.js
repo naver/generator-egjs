@@ -1,6 +1,9 @@
 var webpack = require("webpack");
+var merge = require("webpack-merge");
+var UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+
 var path = require("path");
-var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+var parts = require("./webpack.parts");
 
 var config = {
 	entry: {
@@ -21,24 +24,14 @@ var config = {
 			root: ["eg", "Component"]
 		}
 	},<% } %>
-	devtool: "cheap-module-source-map",
 	module: {
 		rules: [{
 			test: /\.js$/,
 			exclude: /node_modules/,
 			loader: "babel-loader",
 			options: {
-				"presets": [ 
-					[
-						"es2015",
-						{
-							"loose": true,
-							"mouldes": false
-						}
-					]
-				],
-				"plugins": [
-					"add-module-exports"
+				"presets": [
+					["es2015", { modules: false }]
 				]
 			}
 		}]
@@ -66,5 +59,27 @@ var config = {
 
 module.exports = function(env) {
 	env = env || "development";
-	return require("./config/webpack.config." + env + ".js")(config);
+
+	if (env === "development") {
+		return merge([
+			config,
+			parts.development()
+		]);
+	} else if (env === "production") {
+		return merge([
+			config,
+			parts.production()
+		]);
+	} else if (env === "production-packaged") {
+		var strategy = merge.strategy({
+			entry: "replace",
+			externals: "replace"
+		});
+
+		return strategy([
+			config,
+			parts.production(),
+			parts.productionPackaged()
+		]);
+	}
 };
