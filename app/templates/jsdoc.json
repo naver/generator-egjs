@@ -4,17 +4,19 @@
 		"dictionaries": ["jsdoc","closure"]
 	},
 	"source": {
-		"include": ["src"],
+		"include": ["src", "README.md", "node_modules/@egjs/component/src/component.js"],
 		"includePattern": ".+\\.js(doc|x)?$",
 		"excludePattern": "(^|\\/|\\\\)_"
 	},
 	"opts": {
 		"template": "node_modules/egjs-jsdoc-template",
-		"destination": "./doc/"
+		"destination": "./doc/",
+		"ignores": ["eg.Component"],
+		"expendsItemMembers": true
 	},
 	"plugins": [
 		"plugins/markdown",
-		"node_modules/egjs-jsdoc-template/jsdoc-plugin/ko", 
+		"node_modules/egjs-jsdoc-template/jsdoc-plugin/ko",
 		"node_modules/egjs-jsdoc-template/jsdoc-plugin/group",
 		"node_modules/egjs-jsdoc-template/jsdoc-plugin/codepen",
 		"node_modules/egjs-jsdoc-template/jsdoc-plugin/support"
@@ -36,9 +38,9 @@
 			"url": ""
 		},
 		"meta": {
-			"title": "egjs::<%= componentName %> - API",
-			"description": "<%= options.description %>",
-			"keyword": "jQuery, UI Component, egjs, <%= componentName %>"
+			"title": "egjs::visible - API",
+			"description": "&#34;A module that checks if an element is visible in the base element or viewport.&#34;",
+			"keyword": "jQuery, UI Component, egjs, visible"
 		},
 		"linenums": true,
 		"link": {
