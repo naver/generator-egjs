@@ -4,4 +4,5 @@
  */
 
 import <%= upperFirst(componentName) %> from "./<%= componentName.toLowerCase() %>";
+
 module.exports = <%= upperFirst(componentName) %>;
