@@ -150,6 +150,10 @@ module.exports = generators.Base.extend({
 			this.fs.move(
 				this.destinationPath("src/component.template.js"),
 				this.destinationPath("src/" + this.componentName.toLowerCase() + ".js")
+			);
+			this.fs.move(
+				this.destinationPath("test/unit/component.spec.template.js"),
+				this.destinationPath("test/unit/" + this.componentName.toLowerCase() + ".spec.js")
 			)
 		}
 	},

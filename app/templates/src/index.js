@@ -3,6 +3,6 @@
  * egjs-<%= componentName.toLowerCase() %> projects are licensed under the <%= options.license %> license
  */
 
-import <%= upperFirst(componentName) %> from "./<%= componentName.toLowerCase() %>";
+const <%= upperFirst(componentName) %> = require("./<%= componentName.toLowerCase() %>").default;
 
 module.exports = <%= upperFirst(componentName) %>;

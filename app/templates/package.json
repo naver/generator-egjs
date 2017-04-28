@@ -10,16 +10,12 @@
     "jsdoc": "rm -rf ./doc && jsdoc -c jsdoc.json",
     "prepush": "npm run lint",
     "commitmsg": "node config/validate-commit-msg.js",
-    "test": "karma start",
-    "prebuild:demo": "cpx 'doc/**/*' demo/doc/ --clean && cpx 'dist/**/*' demo/dist --clean",
-    "build:demo": "jekyll build -s demo",
-    "open:demo": "npm run prebuild:demo && jekyll serve -s demo",
-    "deploy:demo": "gh-pages -d demo/_site"
+    "test": "karma start"
 	},
 	"author": "<%= options.author %>",
 	"license": "<%= options.license %>",<% if(options.extendsComponent){ %>
 	"dependencies": {
-		"egjs-component": "github:naver/egjs-component"
+    "@egjs/component": "^2.0.0-rc.1"
 	},<% } %>
 	"devDependencies": {
     "babel-core": "^6.24.0",
