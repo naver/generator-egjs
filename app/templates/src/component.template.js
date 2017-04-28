@@ -6,15 +6,13 @@
 
 /**
  * <%= options.description %>
- * @class
- * @name <%= upperFirst(componentName) %>
- <% if(options.extendsComponent){ %>* @extends Component<% } %>
- * @group egjs
+ * @alias eg.<%= upperFirst(componentName) %>
+ <% if(options.extendsComponent){ %>* @extends eg.Component<% } %>
  */
 class <%= upperFirst(componentName) %><% if(options.extendsComponent){ %> extends Component<% } %> {
-	constructor () {
-		<% if(options.extendsComponent){ %>super();<% } %>
-	}
+	<% if(options.extendsComponent){ %>constructor() {
+		super();
+	}<% } %>
 }
 
 export default <%= upperFirst(componentName) %>;

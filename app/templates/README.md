@@ -1,78 +1,47 @@
 # egjs-<%= componentName.toLowerCase() %>
 
-## requirement
+<%= options.description %>
 
-```
-// dependencies
-npm install
-```
+## Documentation
 
-## start
+* API Documentation
 
-```
-// it will open browser
-npm start // or webpack-dev-server --open
-```
+## Supported Browsers
 
-checkout http://localhost:8080/demo
+The following table shows browsers supported by eg.Visible
 
-## build
+|Internet Explorer|Chrome|Firefox|Safari|iOS|Android|
+|---|---|---|---|---|---|
+|||||||
 
-```
-npm run build // or webpack
-```
 
-## test
+<% if(options.extendsComponent){ %>## Dependency
 
-```
-npm run test // or karma start
-```
+egjs-<%= componentName.toLowerCase() %> has the dependencies for the following libraries:
 
-## documentation
+|[egjs-component](http://github.com/naver/egjs/egjs-component)|
+|----|
+|2.0.0+|<% } %>
 
-```
-npm run jsdoc // or jsdoc -c jsdoc.json
+
+## How to Use
+
+### 1. Load visible.pkgd.min.js
+
+```html
+<script src="../dist/<%= componentName.toLowerCase() %>.js"></script>
 ```
 
-## directories
+### 2. Use eg.<%= componentName.toLowerCase() %>
+```javascript
+// create eg.<%= componentName.toLowerCase() %>
+var <%= componentName.toLowerCase() %> = new eg.<%= upperFirst(componentName) %>();
+```
 
-```
-egjs-<%= componentName.toLowerCase() %>
-  ├─ config/
-  │   ├─ webpack.config.development.js
-  │   ├─ webpack.config.production.js
-  │   └─ webpack.config.packaged.js
-  ├─ dist/
-  │   ├─ <%= componentName.toLowerCase() %>.js
-  │   ├─ <%= componentName.toLowerCase() %>.min.js
-  │   ├─ <%= componentName.toLowerCase() %>.js.map
-  │   └─ <%= componentName.toLowerCase() %>.min.js.map
-  ├─ src/
-  │   ├─ index.js
-  │   └─ <%= componentName.toLowerCase() %>.js
-  ├─ demo/
-  │   ├─ js
-  │   │   └─ demo.js
-  │   └─ index.html
-  ├─ doc/
-  ├─ test/
-  │   ├─ manual/
-  │   │   ├─ js
-  │   │   │   └─ test.js
-  │   │   └─ index.html
-  │   └─ unit/
-  │       ├─ js
-  │       │   └─ test.js
-  │       └─ index.html
-  ├─ .editconfig
-  ├─ .gitignore
-  ├─ .npmignore
-  ├─ bower.json
-  ├─ karma.conf.js
-  ├─ package.json
-  ├─ README.md
-  └─ webpack.config.js
-```
+## Bug Report
+
+If you find a bug, please report it to us using the [Issues](https://github.com/youre/repository) page on GitHub.
+
 
 ## License
 
