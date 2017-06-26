@@ -19,6 +19,6 @@
     "lodash.capitalize": "^4.2.1",
     "lodash.upperfirst": "^4.3.1",
     "semver-regex": "^1.0.0",
-    "yeoman-generator": "^0.24.1"
+    "yeoman-generator": "^1.1.1"
   }
 }
