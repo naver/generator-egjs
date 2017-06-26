@@ -1,5 +1,5 @@
 /**
- * Copyright (c) <%= options.author %>
+ * Copyright (c) <%= author %>
  */
 
-console.log("Hello eg.<%= upperFirst(componentName) %>!!!", eg.<%= upperFirst(componentName) %>);
+console.log("Hello eg.<%= ComponentName %>!!!", eg.<%= ComponentName %>);

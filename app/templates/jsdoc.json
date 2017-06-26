@@ -27,7 +27,7 @@
 		"default": {
 			"outputSourceFiles" : true
 		},
-		"applicationName": "egjs",
+		"applicationName": "eg.<%= componentName %>",
 		"disqus": "egjs",
 		"googleAnalytics": "",
 		"openGraph": {
@@ -38,13 +38,13 @@
 			"url": ""
 		},
 		"meta": {
-			"title": "egjs::visible - API",
-			"description": "&#34;A module that checks if an element is visible in the base element or viewport.&#34;",
-			"keyword": "jQuery, UI Component, egjs, visible"
+			"title": "",
+			"description": "",
+			"keyword": ""
 		},
 		"linenums": true,
 		"link": {
-			"canonical": "http://naver.github.io/egjs/latest/doc/"
+			"canonical": ""
 		}
 	},
 	"markdown": {

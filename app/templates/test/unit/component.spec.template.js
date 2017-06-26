@@ -1,18 +1,18 @@
-import <%= upperFirst(componentName) %> from "../../src/<%= componentName.toLowerCase() %>";
+import <%= ComponentName %> from "../../src/<%= ComponentName %>";
 
 describe("<%= componentName %>", () => {
 	let <%= componentName %>;
 
 	beforeEach(() => {
-		<%= componentName %> = new <%= upperFirst(componentName) %>();
+		<%= componentName %> = new <%= ComponentName %>();
 	});
 
 	afterEach(() => {
-		<% if(options.extendsComponent){ %>// <%= componentName %>.destroy();<% } %>
+		<% if(extendsComponent){ %>// <%= componentName %>.destroy();<% } %>
 		<%= componentName %> = null;
 	});
 
 	it("should created instance", () => {
-		expect(<%= componentName %>).to.be.an.instanceof(<%= upperFirst(componentName) %>);
+		expect(<%= componentName %>).to.be.an.instanceof(<%= ComponentName %>);
 	});
 });

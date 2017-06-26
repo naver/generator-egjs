@@ -1,16 +1,4 @@
-generator-egjs
-Copyright 2015 NAVER Corp.
-
-This project contains subcomponents with separate copyright notices and license terms. 
-Your use of the source code for these subcomponents is subject to the terms and conditions of the following licenses.
-
-=====
-
-AngularJS from https://github.com/angular/angular.js
-
-=====
-
-Copyright (c) 2010-2015 Google, Inc. http://angularjs.org
+Copyright (c) 2015 NAVER Corp.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,16 +12,8 @@ all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-=====
-
-devaid-jekyll-theme from https://github.com/kevit/devaid-jekyll-theme
-
-=====
-
-This Bootstrap theme is made by UX designer Xiaoying Riley (https://www.linkedin.com/in/xiaoying) at 3rd Wave Media for developers and is 100% FREE under the Creative Commons Attribution 3.0 License (CC BY 3.0) - https://creativecommons.org/licenses/by/3.0/

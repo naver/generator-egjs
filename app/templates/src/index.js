@@ -1,8 +1,9 @@
 /**
- * Copyright (c) <%= options.author %>
- * egjs-<%= componentName.toLowerCase() %> projects are licensed under the <%= options.license %> license
+ * Copyright (c) <%= author %>
+ * egjs-<%= componentname %> projects are licensed under the <%= license %> license
  */
 
-const <%= upperFirst(componentName) %> = require("./<%= componentName.toLowerCase() %>").default;
+import <%= ComponentName %> from "./<%= ComponentName %>";
 
-module.exports = <%= upperFirst(componentName) %>;
+<%= ComponentName %>.VERSION = "#__VERSION__#";
+module.exports = <%= ComponentName %>;
