@@ -21,7 +21,8 @@ var config = {
 			amd: "@egjs/component",
 			root: [pkg.namespace.eg, "Component"]
 		}
-	},<% } %>
+	},<% } else {%>
+	externals: [],<% } %>	
 	module: {
 		rules: [{
 			test: /\.js$/,

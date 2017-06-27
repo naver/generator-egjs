@@ -25,12 +25,14 @@ module.exports = class extends Generator {
 				}
 				return true;
 			}
-		}, {
-			type: "input",
-			name: "author",
-			message: "Enter component author",
-			default: "NAVER Corp."
-		}, {
+		}, 
+		// {
+		// 	type: "input",
+		// 	name: "author",
+		// 	message: "Enter component author",
+		// 	default: "NAVER Corp."
+		// }, 
+		{
 			type: "input",
 			name: "license",
 			message: "Enter component license",
@@ -81,7 +83,7 @@ module.exports = class extends Generator {
 			this.options.componentname = this.options.componentName.toLowerCase();
 			this.options.ComponentName = upperFirst(this.options.componentName);
 			this.options.description = answers.description.trim();
-			this.options.author = answers.author.trim();
+			this.options.author = "NAVER Corp.";
 			this.options.license = answers.license.trim();
 			this.options.extendsComponent = answers.extendsComponent;
 			this.options.version = answers.version.trim();

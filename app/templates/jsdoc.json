@@ -27,7 +27,7 @@
 		"default": {
 			"outputSourceFiles" : true
 		},
-		"applicationName": "eg.<%= componentName %>",
+		"applicationName": "eg.<%= ComponentName %>",
 		"disqus": "egjs",
 		"googleAnalytics": "",
 		"openGraph": {
@@ -38,13 +38,13 @@
 			"url": ""
 		},
 		"meta": {
-			"title": "",
-			"description": "",
+			"title": "egjs::<%= componentName %> - API",
+			"description": "<%= description %>",
 			"keyword": ""
 		},
 		"linenums": true,
 		"link": {
-			"canonical": ""
+			"canonical": "http://naver.github.io/egjs/"
 		}
 	},
 	"markdown": {
