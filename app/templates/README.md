@@ -1,14 +1,12 @@
-# egjs-<%= componentname %> [![npm version](https://badge.fury.io/js/%40egjs%2F<%= componentname %>.svg)](https://badge.fury.io/js/%40egjs%2F<%= componentname %>) [![Build Status](https://travis-ci.org/naver/egjs-<%= componentname %>.svg?branch=master)](https://travis-ci.org/naver/egjs-<%= componentname %>) 
+# egjs-<%= componentname %> [![npm version](https://badge.fury.io/js/%40egjs%2F<%= componentname %>.svg)](https://badge.fury.io/js/%40egjs%2F<%= componentname %>) [![Build Status](https://travis-ci.org/naver/egjs-<%= componentname %>.svg?branch=master)](https://travis-ci.org/naver/egjs-<%= componentname %>) [![Coverage Status](https://coveralls.io/repos/github/naver/egjs-<%= componentname %>/badge.svg?branch=master)](https://coveralls.io/github/naver/egjs-<%= componentname %>?branch=master)
 
-[![Issue Stats](http://issuestats.com/github/naver/egjs-<%= componentname %>/badge/pr?style=flat)](http://issuestats.com/github/naver/egjs-<%= componentname %>)
-[![Issue Stats](http://issuestats.com/github/naver/egjs-<%= componentname %>/badge/issue?style=flat)](http://issuestats.com/github/naver/egjs-<%= componentname %>)
+https://naver.github.io/egjs-<%= componentname %>
 
 <%= description %>
 
-## Documentation
-* API Documentation
-    - Latest: [https://naver.github.io/egjs-<%= componentname %>/release/latest/doc/](https://naver.github.io/egjs-<%= componentname %>/release/latest/doc/)
-    - Specific version: [https://naver.github.io/egjs-<%= componentname %>/release/[VERSION]/doc/](https://naver.github.io/egjs-<%= componentname %>/release/[VERSION]/doc/)
+## API Documentation
+- Latest: [https://naver.github.io/egjs-<%= componentname %>/release/latest/doc/](https://naver.github.io/egjs-<%= componentname %>/release/latest/doc/)
+- Specific version: [https://naver.github.io/egjs-<%= componentname %>/release/[VERSION]/doc/](https://naver.github.io/egjs-<%= componentname %>/release/[VERSION]/doc/)
 
 
 ## Supported Browsers
@@ -47,7 +45,7 @@ You can download the compressed files for production
 - Latest : https://naver.github.io/egjs-<%= componentname %>/release/latest/dist/<%= componentname %>.min.js
 - Specific version : https://naver.github.io/egjs-<%= componentname %>/release/[VERSION]/dist/<%= componentname %>.min.js
 
-### Packaged version
+<% if(packaged){ %>### Packaged version (with Dependencies)
 > Packaged version is not an official distribution.
 > Is just to provide for ease use of 'egjs-<%= componentname %>' with dependency.
 
@@ -58,8 +56,7 @@ You can download the compressed files for production
  - **Specific version**
     - https://naver.github.io/egjs-<%= componentname %>/release/[VERSION]/dist/<%= componentname %>.pkgd.js
     - https://naver.github.io/egjs-<%= componentname %>/release/[VERSION]/dist/<%= componentname %>.pkgd.min.js
-
-
+<% } %>
 ### Installation with npm
 
 The following command shows how to install egjs-<%= componentname %> using npm.
