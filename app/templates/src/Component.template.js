@@ -7,12 +7,9 @@
 /**
  * <%= description %>
  * @alias eg.<%= ComponentName %>
- <% if(extendsComponent){ %>* @extends eg.Component<% } %>
+ *<% if(extendsComponent){ %> @extends eg.Component<% } %>
  */
 class <%= ComponentName %><% if(extendsComponent){ %> extends Component<% } %> {
-	<% if(extendsComponent){ %>constructor() {
-		super();
-	}<% } %>
 }
 
 export default <%= ComponentName %>;

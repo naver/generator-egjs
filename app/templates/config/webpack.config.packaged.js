@@ -1,6 +1,6 @@
 var merge = require("webpack-merge");
 var webpack = require("webpack");
-var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+var UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 var uglifyConfig = require("./uglify");
 var banner = require("./banner");
 

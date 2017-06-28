@@ -15,59 +15,81 @@ module.exports = class extends Generator {
 	}
 	prompting() {
 		const message = [{
-			type: "input",
-			name: "description",
-			message: "Enter component description",
-			validate: function(input) {
-				if (!input) {
-					console.log("\nPlease enter a valid component description");
-					return false;
+				type: "input",
+				name: "description",
+				message: "Enter component description",
+				validate: function (input) {
+					if (!input) {
+						console.log("\nPlease enter a valid component description");
+						return false;
+					}
+					return true;
 				}
-				return true;
-			}
-		}, 
-		// {
-		// 	type: "input",
-		// 	name: "author",
-		// 	message: "Enter component author",
-		// 	default: "NAVER Corp."
-		// }, 
-		{
-			type: "input",
-			name: "license",
-			message: "Enter component license",
-			default: "MIT",
-			validate: function(input) {
-				if (!isSpdxLicenseId(input)) {
-					console.log("\nSorry, license should be a valid SPDX license expression");
-					return false;
+			},
+			// {
+			// 	type: "input",
+			// 	name: "author",
+			// 	message: "Enter component author",
+			// 	default: "NAVER Corp."
+			// }, 
+			{
+				type: "input",
+				name: "license",
+				message: "Enter component license",
+				default: "MIT",
+				validate: function (input) {
+					if (!isSpdxLicenseId(input)) {
+						console.log("\nSorry, license should be a valid SPDX license expression");
+						return false;
+					}
+					return true;
 				}
-				return true;
-			}
-		}, {
-			type: "confirm",
-			name: "extendsComponent",
-			message: "Would you like to extends a 'egjs-component' for your project?",
-			default: false
-		}, {
-			type: "input",
-			name: "version",
-			message: "Enter component version",
-			default: "2.0.0",
-			validate: function(input) {
-				if (!semverRegex().test(input)) {
-					console.log("\nSorry, version should be a valid semantic versioning expression");
-					return false;
+			},
+			{
+				type: "input",
+				name: "GA",
+				message: "Enter GoogleAnalytics ID",
+				default: "UA-XXXXXXXX-XX",
+				validate: function (input) {
+					if (!input) {
+						console.log("\nPlease enter a valid GoogleAnalytics ID");
+						return false;
+					}
+					return true;
 				}
-				return true;
+			},
+			{
+				type: "input",
+				name: "version",
+				message: "Enter component version",
+				default: "2.0.0",
+				validate: function (input) {
+					if (!semverRegex().test(input)) {
+						console.log("\nSorry, version should be a valid semantic versioning expression");
+						return false;
+					}
+					return true;
+				}
+			},
+			{
+				type: "confirm",
+				name: "extendsComponent",
+				message: "Would you like to extends a 'egjs-component' for your project?",
+				default: false
+			},
+			{
+				type: "confirm",
+				name: "packaged",
+				message: "Would you like to support 'packaged' version?",
+				default: false
 			}
-		}];
+		];
 
-		if(!this.options.componentName) {
+		if (!this.options.componentName) {
 			message.unshift({
 				type: "input",
 				name: "componentName",
-				message: "Enter component name(\"camelCase\" is recommended)",
+				message: "Enter component name(\"camelCase\" is recommended. ex. infiniteGrid)",
 				validate: (input) => {
 					if (!input) {
 						console.log("\nPlease enter a valid component name");
@@ -84,7 +106,9 @@ module.exports = class extends Generator {
 			this.options.ComponentName = upperFirst(this.options.componentName);
 			this.options.description = answers.description.trim();
 			this.options.author = "NAVER Corp.";
+			this.options.GA = answers.GA.trim();
 			this.options.license = answers.license.trim();
+			this.options.packaged = answers.packaged;
 			this.options.extendsComponent = answers.extendsComponent;
 			this.options.version = answers.version.trim();
 		});
@@ -93,11 +117,10 @@ module.exports = class extends Generator {
 		console.log("\nCreating egjs-" + this.options.componentname);
 		this.destinationRoot("egjs-" + this.options.componentname);
 		this.fs.copyTpl(
-      this.sourceRoot(),
-      this.destinationPath("."),
-      this.options,
-			{dot: true}
-    );
+			this.sourceRoot(),
+			this.destinationPath("."),
+			this.options
+		);
 		this.fs.copy(
 			this.templatePath(".*"),
 			this.destinationRoot(".")
@@ -110,16 +133,30 @@ module.exports = class extends Generator {
 			this.destinationPath("test/unit/component.spec.template.js"),
 			this.destinationPath("test/unit/" + this.options.componentname + ".spec.js")
 		);
+		if(!this.options.packaged) {
+			this.fs.delete("config/webpack.config.packaged.js");
+		}
+		
 	}
 	install() {
-    this.installDependencies({
-      npm: true,
-      bower: false,
-      yarn: false,
-			callback: function() {
+		var self = this;
+		this.npmInstall(['github:naver/egjs#common-demo'], {} ,function() {
+			self.fs.copyTpl(
+				self.destinationPath("node_modules/@egjs/common-demo"),
+				self.destinationPath() + "/demo",
+				self.options
+			);
+			self.fs.delete("demo/package.json");
+		});
+		
+		this.installDependencies({
+			npm: true,
+			bower: false,
+			yarn: false,
+			callback: function () {
 				console.log("\nDone!!");
 				console.log("Run 'npm start', checkout http://localhost:8080/test/manual/");
 			}
-    });
-  }
+		});
+	}
 };

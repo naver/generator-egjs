@@ -4,7 +4,7 @@
 		"dictionaries": ["jsdoc","closure"]
 	},
 	"source": {
-		"include": ["src", "README.md", "node_modules/@egjs/component/src/component.js"],
+		"include": ["src", "README.md" <% if(extendsComponent){ %>, "node_modules/@egjs/component/src/component.js"], <% } else { %> ], <% } %>
 		"includePattern": ".+\\.js(doc|x)?$",
 		"excludePattern": "(^|\\/|\\\\)_"
 	},
@@ -29,7 +29,7 @@
 		},
 		"applicationName": "eg.<%= ComponentName %>",
 		"disqus": "egjs",
-		"googleAnalytics": "",
+		"googleAnalytics": "<%= GA %>",
 		"openGraph": {
 			"title": "",
 			"type": "website",
@@ -38,7 +38,7 @@
 			"url": ""
 		},
 		"meta": {
-			"title": "egjs::<%= componentName %> - API",
+			"title": "egjs::<%= componentname %> - API",
 			"description": "<%= description %>",
 			"keyword": ""
 		},
