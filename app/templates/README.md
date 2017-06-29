@@ -1,7 +1,5 @@
 # egjs-<%= componentname %> [![npm version](https://badge.fury.io/js/%40egjs%2F<%= componentname %>.svg)](https://badge.fury.io/js/%40egjs%2F<%= componentname %>) [![Build Status](https://travis-ci.org/naver/egjs-<%= componentname %>.svg?branch=master)](https://travis-ci.org/naver/egjs-<%= componentname %>) [![Coverage Status](https://coveralls.io/repos/github/naver/egjs-<%= componentname %>/badge.svg?branch=master)](https://coveralls.io/github/naver/egjs-<%= componentname %>?branch=master)
 
-https://naver.github.io/egjs-<%= componentname %>
-
 <%= description %>
 
 ## Documents
