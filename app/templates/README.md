@@ -4,28 +4,9 @@ https://naver.github.io/egjs-<%= componentname %>
 
 <%= description %>
 
-## API Documentation
-- Latest: [https://naver.github.io/egjs-<%= componentname %>/release/latest/doc/](https://naver.github.io/egjs-<%= componentname %>/release/latest/doc/)
-- Specific version: [https://naver.github.io/egjs-<%= componentname %>/release/[VERSION]/doc/](https://naver.github.io/egjs-<%= componentname %>/release/[VERSION]/doc/)
-
-
-## Supported Browsers
-The following are the supported browsers.
-
-|Internet Explorer|Chrome|Firefox|Safari|iOS|Android|
-|---|---|---|---|---|---|
-|||||||
-
-
-<% if(extendsComponent){ %>## Dependency
-
-egjs-<%= componentname %> has the dependencies for the following libraries:
-
-|[egjs-component](http://github.com/naver/egjs/egjs-component)|
-|----|
-|2.0.0+|<% } %>
-
-
+## Documents
+- [Get Started and Demos](https://naver.github.io/egjs-<%= componentname %>/)
+- [API documentation](https://naver.github.io/egjs-<%= componentname %>/release/latest/doc/)
 
 ## Download and Installation
 
@@ -64,6 +45,85 @@ The following command shows how to install egjs-<%= componentname %> using npm.
 ```bash
 $ npm install @egjs/<%= componentname %>
 ```
+
+
+## Supported Browsers
+The following are the supported browsers.
+
+|Internet Explorer|Chrome|Firefox|Safari|iOS|Android|
+|---|---|---|---|---|---|
+|||||||
+
+<% if(extendsComponent){ %>## Dependency
+
+egjs-<%= componentname %> has the dependencies for the following libraries:
+
+|[egjs-component](http://github.com/naver/egjs/egjs-component)|
+|----|
+|2.0.0+|<% } %>
+
+
+## How to start developing egjs-<%= componentname %>?
+
+For anyone interested to develop egjs-<%= componentname %>, follow the instructions below.
+
+### Development Environment
+
+#### 1. Clone the repository
+
+Clone the egjs-<%= componentname %> repository and install the dependency modules.
+
+```bash
+# Clone the repository.
+$ git clone https://github.com/naver/egjs-<%= componentname %>.git
+```
+
+#### 2. Install dependencies
+`npm` is supported.
+
+```
+# Install the dependency modules.
+$ npm install
+```
+
+#### 3. Build
+
+Use npm script to build billboard.js
+
+```bash
+# Run webpack-dev-server for development
+$ npm start
+
+# Build
+$ npm run build
+
+# Generate jsdoc
+$ npm run jsdoc
+```
+
+Two folders will be created after complete build is completed.
+
+- **dist** folder: Includes the **<%= componentname %>.js** and **<%= componentname %>.min.js** files.
+- **doc** folder: Includes API documentation. The home page for the documentation is **doc/index.html**.
+
+### Linting
+
+To keep the same code style, we adopted [ESLint](http://eslint.org/) to maintain our code quality. The [rules](https://github.com/naver/eslint-config-naver/tree/master/rules) are modified version based on [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+Setup your editor for check or run below command for linting.
+
+```bash
+$ npm run lint
+```
+
+### Test
+
+Once you created a branch and done with development, you must perform a test running `npm run test` command before you push code to a remote repository.
+
+```bash
+$ npm run test
+```
+Running a `npm run test` command will start [Mocha](https://mochajs.org/) tests via [Karma-runner](https://karma-runner.github.io/).
+
 
 ## Bug Report
 
