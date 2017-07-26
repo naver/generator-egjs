@@ -5,5 +5,4 @@
 
 import <%= ComponentName %> from "./<%= ComponentName %>";
 
-<%= ComponentName %>.VERSION = "#__VERSION__#";
 module.exports = <%= ComponentName %>;

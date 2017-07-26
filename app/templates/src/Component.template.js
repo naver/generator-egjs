@@ -12,4 +12,5 @@
 class <%= ComponentName %><% if(extendsComponent){ %> extends Component<% } %> {
 }
 
+<%= ComponentName %>.VERSION = "#__VERSION__#";
 export default <%= ComponentName %>;
