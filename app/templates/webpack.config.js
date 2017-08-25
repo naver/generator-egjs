@@ -23,6 +23,7 @@ var config = {
 		}
 	},<% } else {%>
 	externals: [],<% } %>	
+	devtool: "cheap-source-map",
 	module: {
 		rules: [{
 			test: /\.js$/,
