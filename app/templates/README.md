@@ -56,7 +56,7 @@ The following are the supported browsers.
 
 egjs-<%= componentname %> has the dependencies for the following libraries:
 
-|[egjs-component](http://github.com/naver/egjs/egjs-component)|
+|[egjs-component](http://github.com/naver/egjs-component)|
 |----|
 |2.0.0+|<% } %>
 
