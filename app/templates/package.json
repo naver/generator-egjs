@@ -21,7 +21,8 @@
 		"demo:updateVersion": "echo $npm_package_version > demo/_data/version.yml",
 		"demo:setup": "cpx 'node_modules/@egjs/common-demo/**/*' 'demo/' && rm demo/package.json",
 		"coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-		"prepush": "npm run lint",
+    "changelog": "node ./config/changelog.js",
+    "prepush": "npm run lint",
 		"commitmsg": "node config/validate-commit-msg.js"
   },
   "author": {
@@ -31,6 +32,7 @@
     "eg": "eg"
   },
   "license": "<%= license %>",
+  "homepage": "https://github.com/naver/egjs-<%= componentname %>",
   <% if(extendsComponent){ %>
   "dependencies": {
     "@egjs/component": "^2.0.0"
