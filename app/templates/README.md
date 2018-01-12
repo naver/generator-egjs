@@ -56,7 +56,7 @@ The following are the supported browsers.
 
 egjs-<%= componentname %> has the dependencies for the following libraries:
 
-|[egjs-component](http://github.com/naver/egjs-component)|
+|[egjs-component](https://github.com/naver/egjs-component)|
 |----|
 |2.0.0+|<% } %>
 
@@ -129,7 +129,7 @@ If you find a bug, please report it to us using the [Issues](https://github.com/
 
 
 ## License
-egjs-<%= componentname %> is released under the [MIT license](http://naver.github.io/egjs/license.txt).
+egjs-<%= componentname %> is released under the [MIT license](https://raw.githubusercontent.com/naver/egjs/master/LICENSE.txt).
 
 
 ```
